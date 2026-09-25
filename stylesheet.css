@@ -134,6 +134,38 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+.research-filters {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #e7f4ff;
+}
+
+.research-filters button {
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 14px;
+  background: transparent;
+  color: #1772d0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.research-filters button.active {
+  background: #1772d0;
+  color: #fff;
+}
+
+.research-filters button:focus-visible {
+  outline: 2px solid #f09228;
+  outline-offset: 2px;
+}
+
+#research-list.show-highlights > tbody > tr:not([data-highlight]) {
+  display: none;
+}
+
 .colored-box {
     color: black;
     padding: 20px;

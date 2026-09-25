@@ -7,6 +7,7 @@
 
     <meta name="author" content="Jon Barron">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base target="_blank">
     <link rel="shortcut icon" href="images/shaotingzhu.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
@@ -31,7 +32,7 @@
                   If you want to connect with me, please feel free to reach out via email or social media! Wechat: zst1406217.
                 </p>
                 <p style="text-align:center">
-                  <a href="mailto:zhust24@mails.tsinghua.edu.cn">Email</a> &nbsp;/&nbsp;
+                  <a href="mailto:zhust24@mails.tsinghua.edu.cn" target="_self">Email</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?user=BE7NiFcAAAAJ&hl=zh-CN&oi=ao">Scholar</a> &nbsp;/&nbsp;
                   <a href="https://x.com/ShaotingZ38103">Twitter</a> &nbsp;/&nbsp;
                   <a href="https://github.com/zst1406217">Github</a>
@@ -68,7 +69,7 @@
             </td>
           </tr>
         </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom:-25px;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom:-18px;"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
@@ -77,10 +78,14 @@
                   <br>
                   (* indicates equal contribution; ‡ indicates equal second-author contribution; † indicates corresponding author)
                 </p>
+                <div class="research-filters" role="group" aria-label="Research publications filter">
+                  <button type="button" class="active" data-research-filter="highlights" aria-pressed="true">Highlights</button>
+                  <button type="button" data-research-filter="all" aria-pressed="false">All</button>
+                </div>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table id="research-list" class="show-highlights" style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative; background-color:#ffffff;">
@@ -141,7 +146,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative; background-color:#ffffff;">
                   <img src="images/g05.png" alt="Galaxea G0.5 teaser"
@@ -180,9 +185,9 @@
                 <br>
                 <a href="https://knightnemo.github.io/">Siqiao Huang*</a>,
                 <a href="https://kunying-lee.github.io/">Kun-Ying Lee*</a>,
-                <a href="#">Dongming Qiao*</a>,
+                Dongming Qiao*,
                 <a href="https://guanqihe.github.io/">Guanqi He*</a>,
-                <a href="#">Zhenyu Wang</a>,
+                Zhenyu Wang,
                 <a href="https://liyitang22.github.io/">Yitang Li</a>,
                 <strong>Shaoting Zhu</strong>,
                 <a href="https://hangzhaomit.github.io/">Hang Zhao†</a>
@@ -230,7 +235,7 @@
             </tr>
 
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="vrrobo_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="vrrobo_video" muted autoplay loop playsinline
@@ -266,7 +271,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="vrrobo_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="vrrobo_video" muted autoplay loop playsinline
@@ -284,7 +289,7 @@
                 <strong>Shaoting Zhu*</strong>,
                 <a href="https://ziwenzhuang.github.io/">Ziwen Zhuang*</a>,
                 <a href="https://qxjyqzw.github.io/">Mengjie Zhao</a>,
-                <a href="#">Kun-Ying Lee</a>,
+                Kun-Ying Lee,
                 <a href="https://hangzhaomit.github.io/">Hang Zhao†</a>
                 <br>
                 <em>CoRL</em>, 2026
@@ -333,7 +338,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="vrrobo_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="vrrobo_video" muted autoplay loop playsinline
@@ -368,7 +373,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="moeloco_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="moeloco_video" muted autoplay loop playsinline
@@ -400,7 +405,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="roboengine_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="roboengine_video" muted autoplay loop playsinline
@@ -416,9 +421,9 @@
                 </a>
                 <br>
                 <a href="https://michaelyuancb.github.io/">Chengbo Yuan*</a>,
-                <a href="/#">Suraj Joshi*</a>,
+                Suraj Joshi*,
                 <strong>Shaoting Zhu*</strong>,
-                <a href="#">Hang Su</a>,
+                Hang Su,
                 <a href="https://hangzhaomit.github.io/">Hang Zhao</a>,
                 <a href="http://people.iiis.tsinghua.edu.cn/~gaoyang/">Yang Gao†</a>
                 <br>
@@ -435,7 +440,7 @@
             </tr>
 
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="rrw_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="rrw_video" muted autoplay loop playsinline
@@ -468,7 +473,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="saro_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="saro_video" muted autoplay loop playsinline
@@ -487,7 +492,7 @@
                 <a href="https://scholar.google.com/citations?user=oSnm3PkAAAAJ&hl=en">Derun Li*</a>,
                 <a href="https://linzhanm.github.io/">Linzhan Mou</a>,
                 <a href="https://scholar.google.com/citations?hl=zh-CN&user=qYcgBbEAAAAJ">Yong Liu</a>,
-                <a href="#">Ningyi Xu</a>,
+                Ningyi Xu,
                 <a href="https://hangzhaomit.github.io/">Hang Zhao†</a>
                 <br>
                 <em>ICRA</em>, 2025
@@ -502,7 +507,7 @@
               </td>
             </tr>
 
-            <tr>
+            <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div id="T5_container" style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative;">
                   <video id="T5_video" muted autoplay loop playsinline
@@ -519,8 +524,8 @@
                 </a>
                 <br>
                 <strong>Shaoting Zhu*</strong>,
-                <a href="#">Shuangyue Geng*</a>,
-                <a href="#">Un Lok Chen*</a>
+                Shuangyue Geng*,
+                Un Lok Chen*
                 <br>
                 <em>Course Project</em>, Advanced Machine Learning by <a href="https://keg.cs.tsinghua.edu.cn/jietang/">Jie Tang</a>
                 <br>
@@ -700,5 +705,29 @@
         </td>
       </tr>
     </table>
+    <noscript><style>
+      .research-filters { display: none; }
+      #research-list.show-highlights > tbody > tr:not([data-highlight]) { display: table-row; }
+    </style></noscript>
+    <script>
+      const researchList = document.getElementById('research-list');
+      const researchFilters = document.querySelectorAll('[data-research-filter]');
+      researchFilters.forEach((button) => {
+        button.addEventListener('click', () => {
+          const highlightsOnly = button.dataset.researchFilter === 'highlights';
+          researchList.classList.toggle('show-highlights', highlightsOnly);
+          researchFilters.forEach((filter) => {
+            const active = filter === button;
+            filter.classList.toggle('active', active);
+            filter.setAttribute('aria-pressed', String(active));
+          });
+          researchList.querySelectorAll('tr:not([data-highlight]) video').forEach((video) => {
+            if (highlightsOnly) video.pause();
+            else video.play().catch(() => {});
+          });
+        });
+      });
+      researchList.querySelectorAll('tr:not([data-highlight]) video').forEach((video) => video.pause());
+    </script>
   </body>
 </html>
