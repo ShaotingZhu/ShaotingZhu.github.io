@@ -746,6 +746,14 @@
     <script>
       const researchList = document.getElementById('research-list');
       const researchFilters = document.querySelectorAll('[data-research-filter]');
+      const researchVideos = researchList.querySelectorAll('video');
+      function syncResearchVideos(highlightsOnly) {
+        researchVideos.forEach((video) => {
+          const visible = !highlightsOnly || video.closest('tr').hasAttribute('data-highlight');
+          if (visible) video.play().catch(() => {});
+          else video.pause();
+        });
+      }
       researchFilters.forEach((button) => {
         button.addEventListener('click', () => {
           const highlightsOnly = button.dataset.researchFilter === 'highlights';
@@ -755,13 +763,10 @@
             filter.classList.toggle('active', active);
             filter.setAttribute('aria-pressed', String(active));
           });
-          researchList.querySelectorAll('tr:not([data-highlight]) video').forEach((video) => {
-            if (highlightsOnly) video.pause();
-            else video.play().catch(() => {});
-          });
+          syncResearchVideos(highlightsOnly);
         });
       });
-      researchList.querySelectorAll('tr:not([data-highlight]) video').forEach((video) => video.pause());
+      syncResearchVideos(true);
     </script>
   </body>
 </html>
