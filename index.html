@@ -89,7 +89,7 @@
             <tr data-highlight>
               <td style="padding:16px;width:40%;vertical-align:middle">
                 <div style="width:100%; aspect-ratio: 16 / 9; overflow:hidden; position:relative; background-color:#ffffff;">
-                  <video muted autoplay loop playsinline preload="metadata" poster="images/wb-wam-poster.jpg"
+                  <video muted autoplay loop playsinline preload="metadata" poster="images/wb-wam-poster.jpg" data-playback-rate="2"
                          style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;">
                     <source src="images/wb-wam.mp4" type="video/mp4">
                   </video>
@@ -750,6 +750,7 @@
       function syncResearchVideos(highlightsOnly) {
         researchVideos.forEach((video) => {
           const visible = !highlightsOnly || video.closest('tr').hasAttribute('data-highlight');
+          if (video.dataset.playbackRate) video.playbackRate = Number(video.dataset.playbackRate);
           if (visible) video.play().catch(() => {});
           else video.pause();
         });
